@@ -1,4 +1,6 @@
-/* Rules */
+/*Google fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rubik&display=swap');
 
 * {
     margin: 0px;
@@ -7,6 +9,20 @@
     text-decoration: none;
 }
 
+h1 {
+    font-family: Rubik, sans-serif;
+}
+
+h2, h3, h4 {
+    font-family: Rubik, sans-serif;
+}
+
+p {
+    font-family: Roboto, sans-serif;
+}
+
+/* Rules */
+
 .rules-outer > h2 {
     text-align: center;
 }
@@ -14,7 +30,8 @@
 .rules {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
+    font-size: 1.6rem;
 }
 
 .img-rules {
