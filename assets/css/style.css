@@ -1,0 +1,23 @@
+/* Rules */
+
+* {
+    margin: 0px;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+}
+
+.rules-outer > h2 {
+    text-align: center;
+}
+
+.rules {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.img-rules {
+    height: 4rem;
+    padding: 10px;
+}
