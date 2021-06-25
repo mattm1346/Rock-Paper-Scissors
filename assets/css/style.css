@@ -45,12 +45,13 @@ ul {
 li {
     padding: 20px;
     list-style-type: none;
-    font-family: Rubik, sans-serif;
+    
 }
 
 li > a {
     color: #002060;
-    font-weight: bold;
+    font-family: Roboto, sans-serif;
+    font-size: 1.5rem;
 }
 
 li > a:hover {
@@ -161,6 +162,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     height: 12vh;
+    padding: 30px;
 }
 
 .score h2 {
@@ -173,4 +175,41 @@ footer {
     font-size: 2rem;
     font-family: Rubik, sans-serif;
     padding: 10px;
+}
+
+/* match */
+
+main h2 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.hands {
+    height: 15rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.player-hand {
+    transform: rotate(243deg);
+}
+
+.computer-hand {
+    transform: rotateY(180deg) rotate(243deg);
+}
+
+.options-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.box {
+    text-align: center;
+}
+
+.options {
+    height: 5rem;
+    padding: 1rem;
 }
