@@ -104,6 +104,10 @@ footer {
 
 /* Rules */
 
+.rules-outer {
+    padding-bottom: 20px;
+}
+
 .rules-outer > h2 {
     text-align: center;
     padding-top: 20px;
