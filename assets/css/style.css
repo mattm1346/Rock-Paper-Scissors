@@ -72,6 +72,35 @@ footer {
     background-color: #C5E0B4;
 }
 
+/* Play button */
+
+.btn-outer {
+    padding: 20px;
+}
+
+.play-btn {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #BDD7EE;
+    border-radius: 5px;
+    border: 2px solid #002060;
+    width: fit-content;
+    align-items: center;
+    margin: auto;
+}
+
+.play-btn > a {
+    color: #002060;
+    font-size: 2rem;
+    font-family: Rubik, sans-serif;
+}
+
+.play-btn:hover {
+    background-color: #9DC3E6;
+    cursor: pointer;
+}
+
 /* Rules */
 
 .rules-outer > h2 {
