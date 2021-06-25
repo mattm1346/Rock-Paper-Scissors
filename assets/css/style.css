@@ -151,3 +151,26 @@ footer {
     height: 3rem;
     padding: 10px;
 }
+
+/* Game page */
+
+/* Score */
+
+.score {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 12vh;
+}
+
+.score h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.score p {
+    text-align: center;
+    font-size: 2rem;
+    font-family: Rubik, sans-serif;
+    padding: 10px;
+}
