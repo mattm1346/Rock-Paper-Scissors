@@ -32,6 +32,38 @@ header {
     padding: 20px;
 }
 
+.heading {
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li {
+    padding: 20px;
+    list-style-type: none;
+    font-family: Rubik, sans-serif;
+}
+
+li > a {
+    color: #002060;
+    font-weight: bold;
+}
+
+li > a:hover {
+    border-bottom: 2px solid #002060;
+
+}
+
+.active {
+    border-bottom: 2px solid #002060;
+}
+
+/* main */
+
 main {
     background-color: #E2F0D9;
 }
@@ -83,6 +115,7 @@ footer {
 .rules > p {
     position: relative;
     top: 20px;
+    font-size: 1rem;
 }
 
 .img-rules {
