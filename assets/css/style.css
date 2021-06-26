@@ -159,6 +159,10 @@ footer {
 
 /* Game page */
 
+.game {
+    height: 100vh;
+}
+
 /* Score */
 
 .score {
@@ -186,6 +190,7 @@ footer {
 main h2 {
     text-align: center;
     font-size: 1.5rem;
+    padding: 20px;
 }
 
 .hands {
@@ -211,9 +216,18 @@ main h2 {
 
 .box {
     text-align: center;
+    padding: 10px;
 }
 
 .options {
     height: 5rem;
-    padding: 1rem;
+}
+
+.box > button {
+    background-color: #E2F0D9;
+    border-radius: 50px;
+}
+
+.box > button:hover {
+    cursor: pointer;
 }
