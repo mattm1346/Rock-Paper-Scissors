@@ -231,3 +231,39 @@ main h2 {
 .box > button:hover {
     cursor: pointer;
 }
+
+/* Media Screen */
+
+/* For screen size 580 and below */
+
+@media screen and (max-width: 580px) {
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    li > a {
+        font-size: 1rem;
+    }
+
+    .score h2 {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .score p {
+        font-size: 1.5rem;
+    }
+
+    .hands {
+        height: 8rem;
+    }
+
+    .options {
+        height: 3rem;
+    }
+
+    .box {
+        padding: 5px;
+    }
+}
