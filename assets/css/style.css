@@ -50,7 +50,7 @@ li {
 
 li > a {
     color: #002060;
-    font-family: Roboto, sans-serif;
+    font-family: Rubik, sans-serif;
     font-size: 1.5rem;
 }
 
@@ -165,12 +165,6 @@ footer {
 }
 
 /* Level select */
-
-.level-selector {
-    font-size: 1.2rem;
-    font-family: Rubik, sans-serif;
-    color: #002060;
-}
 
 .level-selector li a:hover {
     border-bottom: 2px solid #002060;
