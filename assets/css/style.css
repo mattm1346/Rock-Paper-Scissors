@@ -106,6 +106,7 @@ footer {
 
 .rules-outer {
     padding-bottom: 20px;
+    display: flex;
 }
 
 .rules-outer > h2 {
@@ -229,6 +230,15 @@ main h2 {
 }
 
 /* Media Screen */
+
+/* For screen size 800 and below */
+
+@media screen and (max-width: 800px) {
+    
+    .rules-outer {
+        display: block;
+    }
+}
 
 /* For screen size 580 and below */
 
