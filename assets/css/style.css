@@ -200,11 +200,7 @@ main h2 {
 }
 
 .player-hand {
-    transform: rotate(243deg);
-}
-
-.computer-hand {
-    transform: rotateY(180deg) rotate(243deg);
+    transform: rotateY(180deg);
 }
 
 .options-outer {
