@@ -164,6 +164,19 @@ footer {
     height: 100vh;
 }
 
+/* Level select */
+
+.level-selector {
+    font-size: 1.2rem;
+    font-family: Rubik, sans-serif;
+    color: #002060;
+}
+
+.level-selector li a:hover {
+    border-bottom: 2px solid #002060;
+    cursor: pointer;
+}
+
 /* Score */
 
 .score {
