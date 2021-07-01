@@ -121,6 +121,11 @@ footer {
     font-size: 1.6rem;
 }
 
+.rules-text {
+    display: flex;
+    justify-content: space-around;
+}
+
 .level-text {
     padding: 5px;
     text-align: center;
