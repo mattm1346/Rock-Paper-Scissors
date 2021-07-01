@@ -82,23 +82,29 @@ const game = ()=> {
 
                 playerHand.src = `./assets/images/${option.name}.png`;
                 computerHand.src = `./assets/images/${computerChoice.name}.png`;
-                
-                // Call compare hands compareHands(option, computerChoice)
+
+                compareHands(option.computerChoice)
             });
         });
     };
     const compareHands = (playerChoice, computerChoice) => {
         //Update Outcome
         const winner = document.querySelector('.outcome');
+        
         //Check for a draw
-        if(playerChoice.name === computerChoice.name){
+        if((playerChoice) === (computerChoice)){
             winner.textContent = 'It is a draw';
             return;
         }
-        if(playerChoice.winsOver.includes(computerChoice.name)){
-            pScore++
+
+        if(playerChoice.winsOver(computerChoice)){
+            winner.textContent = 'Player Wins';
+            pScore++;
+            return;
         }else{
-            cScore++
+            winner.textContent = 'Computer Wins';
+            cScore++;
+            return;
         }
     }
     // Pass the appropriate level here based on user input
