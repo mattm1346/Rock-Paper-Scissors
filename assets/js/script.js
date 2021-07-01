@@ -41,9 +41,9 @@ const OPTION_CONFIG = {
     }
 };
 const LEVEL_CONFIG = {
-    easy: ['rock', 'paper', 'scissors'],
-    medium: [],
-    hard: []
+    easy: [OPTION_CONFIG.rock, OPTION_CONFIG.paper, OPTION_CONFIG.scissors],
+    medium: [OPTION_CONFIG.rock, OPTION_CONFIG.paper, OPTION_CONFIG.scissors, OPTION_CONFIG.lizard],
+    hard: [OPTION_CONFIG.rock, OPTION_CONFIG.paper, OPTION_CONFIG.scissors, OPTION_CONFIG.lizard, OPTION_CONFIG.spock]
 };
 const game = ()=> {
     let pScore = 0;
@@ -53,26 +53,37 @@ const game = ()=> {
         const options = LEVEL_CONFIG[level];
         const playerHand = document.querySelector(".player-hand");
         const computerHand = document.querySelector(".computer-hand");
+
         //Computer Random Choice
+
         const computerOptions = LEVEL_CONFIG[level];
         const optionContainer = document.getElementsByClassName('options-outer')[0];
-//         const optionNodes = document.querySelector(".options");
+        const optionNodes = document.querySelector(".options");
+
         options.forEach(option => {
+
             // Creation an option for that
+
             const optionNode = document.createElement('div');
             optionNode.innerHTML = `<div class="box">
-                    <button data-type="${option}">
-                        <img src="assets/images/${option}.png" class="options" alt="The hand sign for ${option}" data-ol-has-click-handler="">
+                    <button data-type="${option.name}">
+                        <img src="assets/images/${option.name}.png" class="options" alt="The hand sign for ${option.name}" data-ol-has-click-handler="">
                     </button>
-                    <p>${option}</p>
+                    <p>${option.name}</p>
                 </div>`;
+
             optionContainer.appendChild(optionNode);
+
             optionNode.addEventListener("click", function(){
                 const computerNumber = Math.floor(Math.random() * 5);
                 const computerChoice = computerOptions[computerNumber];
+
                 //Update images on choice
-                playerHand.src = `./assets/images/${option}.png`;
-                computerHand.src = `./assets/image/${computerChoice}.png`;
+
+                playerHand.src = `./assets/images/${option.name}.png`;
+                computerHand.src = `./assets/images/${computerChoice.name}.png`;
+                
+                // Call compare hands compareHands(option, computerChoice)
             });
         });
     };
@@ -80,54 +91,17 @@ const game = ()=> {
         //Update Outcome
         const winner = document.querySelector('.outcome');
         //Check for a draw
-        if(playerChoice === computerChoice){
+        if(playerChoice.name === computerChoice.name){
             winner.textContent = 'It is a draw';
             return;
         }
-    }
-    //Configure what each choice can beat
-    const config = {
-        //Rock
-        rock: {
-          name: 'rock',
-          winsOver: [
-            'scissors',
-            'lizard'
-          ]
-        },
-        //Paper
-        paper: {
-            name: 'paper',
-            winsOver: [
-                'rock',
-                'spock'
-            ]
-        },
-        //Scissors
-        scissors: {
-            name: 'scissors',
-            winsOver: [
-                'paper',
-                'lizard'
-            ]
-        },
-        //Lizard
-        lizard: {
-            name: 'lizard',
-            winsOver: [
-                'paper',
-                'spock'
-            ]
-        },
-        //Spock
-        spock: {
-            name: 'spock',
-            winsOver: [
-                'rock',
-                'scissors'
-            ]
+        if(playerChoice.winsOver.includes(computerChoice.name)){
+            pScore++
+        }else{
+            cScore++
         }
-    };
-    playGame("easy");
+    }
+    // Pass the appropriate level here based on user input
+    playGame("hard");
 }
 game();
