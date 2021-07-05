@@ -48,6 +48,7 @@ const LEVEL_CONFIG = {
 const game = ()=> {
     let pScore = 0;
     let cScore = 0;
+
     //Play Game
     const playGame = (level)=> {
         const options = LEVEL_CONFIG[level];
@@ -108,6 +109,22 @@ const game = ()=> {
         }
     }
     // Pass the appropriate level here based on user input
-    playGame("hard");
-}
+    const selectLevel = (level)=> {
+
+        const easy = document.querySelector('play-btn');
+        easy.addEventListener("click", () => {
+            LEVEL_CONFIG.easy,
+        });
+
+        const medium = document.querySelector('play-btn');
+        medium.addEventListener("click", () => {
+            LEVEL_CONFIG.medium,
+        });
+
+        const hard = document.querySelector('play-btn');
+        hard.addEventListener("click", () = > {
+            LEVEL_CONFIG.hard,
+        });
+    }
+}    
 game();

@@ -284,4 +284,8 @@ main h2 {
     .box {
         padding: 5px;
     }
+
+    ul {
+        display: block;
+    }
 }
