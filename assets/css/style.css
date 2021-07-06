@@ -70,7 +70,7 @@ main {
 }
 
 footer {
-    background-color: #C5E0B4;
+    background-color: #E2F0D9;
 }
 
 /* Play button */
@@ -243,9 +243,9 @@ main h2 {
 
 /* Media Screen */
 
-/* For screen size 800 and below */
+/* For screen size 1024 and below */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
     
     .rules-outer {
         display: block;
