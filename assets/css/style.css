@@ -243,9 +243,9 @@ main h2 {
 
 /* Media Screen */
 
-/* For screen size 1024 and below */
+/* For screen size 1440 and below */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1440px) {
     
     .rules-outer {
         display: block;
