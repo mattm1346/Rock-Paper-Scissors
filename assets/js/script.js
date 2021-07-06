@@ -46,8 +46,8 @@ const LEVEL_CONFIG = {
     hard: [OPTION_CONFIG.rock, OPTION_CONFIG.paper, OPTION_CONFIG.scissors, OPTION_CONFIG.lizard, OPTION_CONFIG.spock]
 };
 const game = ()=> {
-    let pScore = 0;
-    let cScore = 0;
+    let playerScore = 0;
+    let computerScore = 0;
     //Play Game
     const playGame = (level)=> {
         const options = LEVEL_CONFIG[level];
@@ -68,12 +68,12 @@ const game = ()=> {
                 </div>`;
             optionContainer.appendChild(optionNode);
             optionNode.addEventListener("click", function(){
-                const computerNumber = Math.floor(Math.random() * 5);
+                const computerNumber = Math.floor(Math.random() * LEVEL_CONFIG[level].length);
                 const computerChoice = computerOptions[computerNumber];
                 //Update images on choice
                 playerHand.src = `./assets/images/${option.name}.png`;
                 computerHand.src = `./assets/images/${computerChoice.name}.png`;
-                compareHands(option.computerChoice)
+                compareHands(option, computerChoice)
             });
         });
     };
@@ -81,17 +81,17 @@ const game = ()=> {
         //Update Outcome
         const winner = document.querySelector('.outcome');
         //Check for a draw
-        if((playerChoice) === (computerChoice)){
+        if(playerChoice.name === computerChoice.name){
             winner.textContent = 'It is a draw';
             return;
         }
-        if(playerChoice.winsOver(computerChoice)){
+        if(playerChoice.winsOver.includes(computerChoice.name)){
             winner.textContent = 'Player Wins';
-            pScore++;
+            playerScore++;
             return;
         }else{
             winner.textContent = 'Computer Wins';
-            cScore++;
+            computerScore++;
             return;
         }
     }
