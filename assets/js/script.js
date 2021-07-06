@@ -48,23 +48,17 @@ const LEVEL_CONFIG = {
 const game = ()=> {
     let pScore = 0;
     let cScore = 0;
-
     //Play Game
     const playGame = (level)=> {
         const options = LEVEL_CONFIG[level];
         const playerHand = document.querySelector(".player-hand");
         const computerHand = document.querySelector(".computer-hand");
-
         //Computer Random Choice
-
         const computerOptions = LEVEL_CONFIG[level];
         const optionContainer = document.getElementsByClassName('options-outer')[0];
         const optionNodes = document.querySelector(".options");
-
         options.forEach(option => {
-
             // Creation an option for that
-
             const optionNode = document.createElement('div');
             optionNode.innerHTML = `<div class="box">
                     <button data-type="${option.name}">
@@ -72,18 +66,13 @@ const game = ()=> {
                     </button>
                     <p>${option.name}</p>
                 </div>`;
-
             optionContainer.appendChild(optionNode);
-
             optionNode.addEventListener("click", function(){
                 const computerNumber = Math.floor(Math.random() * 5);
                 const computerChoice = computerOptions[computerNumber];
-
                 //Update images on choice
-
                 playerHand.src = `./assets/images/${option.name}.png`;
                 computerHand.src = `./assets/images/${computerChoice.name}.png`;
-
                 compareHands(option.computerChoice)
             });
         });
@@ -91,13 +80,11 @@ const game = ()=> {
     const compareHands = (playerChoice, computerChoice) => {
         //Update Outcome
         const winner = document.querySelector('.outcome');
-        
         //Check for a draw
         if((playerChoice) === (computerChoice)){
             winner.textContent = 'It is a draw';
             return;
         }
-
         if(playerChoice.winsOver(computerChoice)){
             winner.textContent = 'Player Wins';
             pScore++;
@@ -108,23 +95,12 @@ const game = ()=> {
             return;
         }
     }
-    // Pass the appropriate level here based on user input
-    const selectLevel = (level)=> {
-
-        const easy = document.querySelector('play-btn');
-        easy.addEventListener("click", () => {
-            LEVEL_CONFIG.easy,
-        });
-
-        const medium = document.querySelector('play-btn');
-        medium.addEventListener("click", () => {
-            LEVEL_CONFIG.medium,
-        });
-
-        const hard = document.querySelector('play-btn');
-        hard.addEventListener("click", () = > {
-            LEVEL_CONFIG.hard,
-        });
+    function getLevelFromURLParam() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        return urlParams.get('level');
     }
+   const level = getLevelFromURLParam();
+   playGame(level);
 }    
 game();
