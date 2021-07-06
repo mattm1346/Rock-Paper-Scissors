@@ -20,3 +20,28 @@ This is a Rock, Paper Scissors game but with a twist! This game lets the user in
 
 ## Wireframes
 
+![Index Wireframe](assets/images/screenshots/wireframe-index.png)
+
+![Game Wireframe](assets/images/screenshots/wireframe-game.png)
+
+## Features
+
+**Homepage**
+
+*Level Select*
+
+![Level Select](assets/images/screenshots/levels.png)
+
+*Rules*
+
+![Rules](assets/images/screenshots/all-rules.png)
+
+**Game Page**
+
+*Score*
+
+![Score](assets/images/screenshots/score.png)
+
+*Options*
+
+![Options](assets/images/screenshots/all-hands.png)
