@@ -80,13 +80,28 @@ const game = ()=> {
             });
         });
     };
-
+    //Select level function from html level selector
+    function getLevelFromURLParam() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        return urlParams.get('level');
+    }
+    //Find out if level is valid if false then return to index page
+    function isLevelValid(level) {
+        const validLevels = Object.keys(LEVEL_CONFIG);
+        return validLevels.includes(level) ? true : false;
+    }
+    const level = getLevelFromURLParam();
+    if(isLevelValid(level)) {
+    playGame(level);
+    } else {
+    window.location.href='./';
+    }
     //Update scores
     function updateScores() {
         document.getElementById('player-score').innerText = playerScore;
         document.getElementById('comp-score').innerText = computerScore;
     }
-
     //Compare hands
     const compareHands = (playerChoice, computerChoice) => {
         //Update Outcome
@@ -107,24 +122,22 @@ const game = ()=> {
             computerScore++;
             updateScores();
             return;
-        } 
-    };
-    //Select level function from html level selector
-    function getLevelFromURLParam() {
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        return urlParams.get('level');
+        }
     }
-    //Find out if level is valid if false then return to index page
-    function isLevelValid(level) {
-        const validLevels = Object.keys(LEVEL_CONFIG);
-        return validLevels.includes(level) ? true : false;
+    //Check score limit reaches 5 if true reset to 0
+    playerScore = 0;
+    computerScore = 0;
+    if('player-score' === 5){
+        alert('Congratulations! You won');
+        playerScore = 0;
+        computerScore = 0;
+        return;
     }
-    const level = getLevelFromURLParam();
-    if(isLevelValid(level)) {
-    playGame(level);
-    } else {
-    window.location.href='./';
+    if('comp-score' === 5){
+        alert('Bad luck, you lost. Try again?');
+        playerScore = 0;
+        computerScore = 0;
+        return;
     }
 };
 //Call game function
