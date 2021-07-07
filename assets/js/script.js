@@ -98,14 +98,14 @@ const game = ()=> {
             winner.textContent = 'Computer Wins';
             computerScore++;
             return;
-        }
+        } 
     };
     //Update scores
     function updateScores() {
         document.getElementById("player-score").innerText = playerScore
-        document.getElementById("comp-score").innerText = compScore    
+        document.getElementById("comp-score").innerText = computerScore
     };
-
+    updateScores();
     //Select level function from html level selector
     function getLevelFromURLParam() {
         const queryString = window.location.search;
@@ -123,7 +123,7 @@ const game = ()=> {
     } else {
     window.location.href='./';
     }
-    updateScores(); 
+    
 };
 //Call game function
 game();
