@@ -80,6 +80,16 @@ const game = ()=> {
             });
         });
     };
+    //Compare hands
+    const compareHands = (playerChoice, computerChoice) => {
+        //Update Outcome
+        const winner = document.querySelector('.outcome');
+        //Check for a draw
+        if(playerChoice.name === computerChoice.name){
+            winner.textContent = 'It is a draw';
+            return;
+        }
+    };
 //Select level function from html level selector
 function getLevelFromURLParam() {
     const queryString = window.location.search;
@@ -100,4 +110,4 @@ if(isLevelValid(level)) {
 
 };
 //Call game function
-game("easy");
+game();
