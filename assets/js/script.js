@@ -40,8 +40,14 @@ const OPTION_CONFIG = {
         ]
     }
 };
+// Configure the level of difficulty
 const LEVEL_CONFIG = {
     easy: [OPTION_CONFIG.rock, OPTION_CONFIG.paper, OPTION_CONFIG.scissors],
     medium: [OPTION_CONFIG.rock, OPTION_CONFIG.paper, OPTION_CONFIG.scissors, OPTION_CONFIG.lizard],
     hard: [OPTION_CONFIG.rock, OPTION_CONFIG.paper, OPTION_CONFIG.scissors, OPTION_CONFIG.lizard, OPTION_CONFIG.spock]
+};
+// Declare score of both players
+const game = ()=> {
+    let playerScore = 0;
+    let computerScore = 0;
 };
