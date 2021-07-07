@@ -55,9 +55,18 @@ const game = ()=> {
         const options = LEVEL_CONFIG[level];
         const playerHand = document.querySelector(".player-hand");
         const computerHand = document.querySelector(".computer-hand");
-        //Computer Random Choice
+        //Computer options
         const computerOptions = LEVEL_CONFIG[level];
         const optionContainer = document.getElementsByClassName('options-outer')[0];
         const optionNodes = document.querySelector(".options");
+        options.forEach(option => {
+            const optionNode = document.createElement('div');
+            optionNode.innerHTML = `<div class="box">
+                    <button data-type="${option.name}">
+                        <img src="assets/images/${option.name}.png" class="options" alt="The hand sign for ${option.name}">
+                    </button>
+                    <p>${option.name}</p>
+                </div>`;
+        }
     }
 };
