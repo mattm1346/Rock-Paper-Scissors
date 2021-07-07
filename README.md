@@ -1,12 +1,12 @@
 # ROCK, PAPER, SCISSORS, LIZARD, SPOCK
 
-*Intro*
-
 This is a Rock, Paper Scissors game but with a twist! This game lets the user increase the level of difficulty. The game is responsive to different devices and can be played on a laptop, mobile phone and tablet.
 
 ## User Experience
 
 **Target Audience**
+
+The target audience for this game are both experienced and inexperienced gamers. The experienced gamers may wish to play a more difficult version of rock, paper, scissors. Wheras the inexperienced gamers may wish to play the easiest version with the rules provided.
 
 ## User Stories
 
