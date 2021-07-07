@@ -62,6 +62,22 @@ Here are the options that the user clicks to choose their hand. Depending on the
 
 ![Options](assets/images/screenshots/all-hands.png)
 
+## Testing
+
+The html and css code have been tested and validated via [W3C](https://validator.w3.org/) and returned with no errors.
+
+![W3C html](assets/images/screenshots/validator-index.png)
+
+![W3C html](assets/images/screenshots/validator-css.png)
+
+## Different Devices
+
+![index multi screen](assets/images/screenshots/multi-index.png)
+
+![game multi screen](assets/images/screenshots/multi-game.png)
+
+Screenshots taken from [techsini](http://techsini.com/multi-mockup/index.php).
+
 ## Technology Used
 
 *img bin*
