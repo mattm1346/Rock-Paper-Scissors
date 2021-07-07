@@ -61,3 +61,61 @@ Here is a score count for each player so the user can keep track of who is winni
 Here are the options that the user clicks to choose their hand. Depending on the level select, there is a limit to what options will show (e.g. 'easy' will only show 'rock', 'paper', and 'scissors')
 
 ![Options](assets/images/screenshots/all-hands.png)
+
+## Technology Used
+
+*img bin*
+
+The hand signs were downloaded from the site [img bin](https://imgbin.com/)
+
+*Youtube*
+
+I watched videos and walkthroughs via [Youtube]() that really helped and explained more about some of the functions I tried to write. Particularly the channels:
+
+[Competent Programming](https://www.youtube.com/channel/UCZBwn0Sdl3mabNeDCIJmNlg/videos)
+
+[Dev Ed](https://www.youtube.com/watch?v=qWPtKtYEsN4)
+
+[Programming with Mosh](https://www.youtube.com/c/programmingwithmosh/videos)
+
+## Deployment
+
+This game has been successfully deployed on GitHub and a live link can be found here: https://mattm1346.github.io/Rock-Paper-Scissors/
+
+The game was deployed using the following steps:
+
+Login to GitHub and click on [My Repositories](https://github.com/mattm1346?tab=repositories)
+
+Open Rock-Paper-Scissors
+
+Go to [settings](https://mattm1346.github.io/Rock-Paper-Scissors/)
+
+Scroll down and click on pages
+
+Locate 'Source' and change the dropdown from 'None' to 'Master Branch'
+
+The page should refresh and the link will be deployed.
+
+*Forking*
+
+To Fork the game follow these steps:
+
+Login to GitHub and locate Rock-Paper-Scissors
+
+Click on the 'Fork' icon (above settings)
+
+It should create a copy of the original Rock-Paper-Scissors
+
+## Credits
+
+[Afiniti](https://www.afiniti.com/corporate/rock-paper-scissors) has a great design in terms of style. However, there is no option allowing the user to change the level of difficulty.
+
+[rock-paper-scissors-game](https://www.rock-paper-scissors-game.com/) is simple but very effective. One drawback is that the game resets just after one round. It could be better if it had more rounds before resetting the game.
+
+*Acknowledgements*
+
+* [Code Institute](https://learn.codeinstitute.net/)
+
+* [MDN Web Docs](https://developer.mozilla.org/en-US/)
+
+* [img bin](https://imgbin.com/)
