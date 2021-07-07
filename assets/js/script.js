@@ -88,6 +88,16 @@ const game = ()=> {
         if(playerChoice.name === computerChoice.name){
             winner.textContent = 'It is a draw';
             return;
+        };
+        //Check for a winner
+        if(playerChoice.winsOver.includes(computerChoice.name)){
+            winner.textContent = 'Player Wins';
+            playerScore++;
+            return;
+        }else{
+            winner.textContent = 'Computer Wins';
+            computerScore++;
+            return;
         }
     };
 //Select level function from html level selector
