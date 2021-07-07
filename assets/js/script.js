@@ -100,24 +100,30 @@ const game = ()=> {
             return;
         }
     };
-//Select level function from html level selector
-function getLevelFromURLParam() {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    return urlParams.get('level');
-}
-//Find out if level is valid if false then return to index page
-function isLevelValid(level) {
-    const validLevels = Object.keys(LEVEL_CONFIG);
-    return validLevels.includes(level) ? true : false;
-}
-const level = getLevelFromURLParam();
-if(isLevelValid(level)) {
-   playGame(level);
-} else {
-   window.location.href='./';
-}
+    //Update scores
+    function updateScores() {
+        document.getElementById("player-score").innerText = playerScore
+        document.getElementById("comp-score").innerText = compScore    
+    };
 
+    //Select level function from html level selector
+    function getLevelFromURLParam() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        return urlParams.get('level');
+    }
+    //Find out if level is valid if false then return to index page
+    function isLevelValid(level) {
+        const validLevels = Object.keys(LEVEL_CONFIG);
+        return validLevels.includes(level) ? true : false;
+    }
+    const level = getLevelFromURLParam();
+    if(isLevelValid(level)) {
+    playGame(level);
+    } else {
+    window.location.href='./';
+    }
+    updateScores(); 
 };
 //Call game function
 game();
