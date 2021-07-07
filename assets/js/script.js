@@ -67,6 +67,37 @@ const game = ()=> {
                     </button>
                     <p>${option.name}</p>
                 </div>`;
-        }
-    }
+                //Computer random choice
+                optionContainer.appendChild(optionNode);
+                //Event listener for clicking on options
+                optionNode.addEventListener("click", function(){
+                const computerNumber = Math.floor(Math.random() * LEVEL_CONFIG[level].length);
+                const computerChoice = computerOptions[computerNumber];
+                //Update images on choice
+                playerHand.src = `./assets/images/${option.name}.png`;
+                computerHand.src = `./assets/images/${computerChoice.name}.png`;
+                compareHands(option, computerChoice)
+            });
+        });
+    };
+//Select level function from html level selector
+function getLevelFromURLParam() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    return urlParams.get('level');
+}
+//Find out if level is valid if false then return to index page
+function isLevelValid(level) {
+    const validLevels = Object.keys(LEVEL_CONFIG);
+    return validLevels.includes(level) ? true : false;
+}
+const level = getLevelFromURLParam();
+if(isLevelValid(level)) {
+   playGame(level);
+} else {
+   window.location.href='./';
+}
+
 };
+//Call game function
+game("easy");
