@@ -20,9 +20,17 @@ The target audience for this game are both experienced and inexperienced gamers.
 
 ## Wireframes
 
+I used Microsoft Word to build the wireframes after a rough sketch on a notepad.
+
 ![Index Wireframe](assets/images/screenshots/wireframe-index.png)
 
+Initially, the index page looked like this. Once I started building the game on html and adding style, I noticed that the rules section was not clear. So I added text labelling what each image was.
+
+I also noticed that the wireframe did not meet the criteria for user #2 (The Experienced Gamer) by not adding the ability to select the different levels. I then rearranged the rules into three different sections and made it clear that these were different levels.
+
 ![Game Wireframe](assets/images/screenshots/wireframe-game.png)
+
+The final game page is close to the wireframe except for the navigation bar. I decided to replace the two links with one that returns the user to the index page.
 
 ## Features
 
@@ -30,9 +38,13 @@ The target audience for this game are both experienced and inexperienced gamers.
 
 *Level Select*
 
+The homepage has a level select where the user may choose what level to play.
+
 ![Level Select](assets/images/screenshots/levels.png)
 
 *Rules*
+
+Here are the rules for each level, explaining what hand wins over the other.
 
 ![Rules](assets/images/screenshots/all-rules.png)
 
@@ -40,8 +52,12 @@ The target audience for this game are both experienced and inexperienced gamers.
 
 *Score*
 
+Here is a score count for each player so the user can keep track of who is winning.
+
 ![Score](assets/images/screenshots/score.png)
 
 *Options*
+
+Here are the options that the user clicks to choose their hand. Depending on the level select, there is a limit to what options will show (e.g. 'easy' will only show 'rock', 'paper', and 'scissors')
 
 ![Options](assets/images/screenshots/all-hands.png)
