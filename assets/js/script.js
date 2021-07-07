@@ -76,10 +76,17 @@ const game = ()=> {
                 //Update images on choice
                 playerHand.src = `./assets/images/${option.name}.png`;
                 computerHand.src = `./assets/images/${computerChoice.name}.png`;
-                compareHands(option, computerChoice)
+                compareHands(option, computerChoice);
             });
         });
     };
+
+    //Update scores
+    function updateScores() {
+        document.getElementById('player-score').innerText = playerScore;
+        document.getElementById('comp-score').innerText = computerScore;
+    }
+
     //Compare hands
     const compareHands = (playerChoice, computerChoice) => {
         //Update Outcome
@@ -88,24 +95,20 @@ const game = ()=> {
         if(playerChoice.name === computerChoice.name){
             winner.textContent = 'It is a draw';
             return;
-        };
+        }
         //Check for a winner
         if(playerChoice.winsOver.includes(computerChoice.name)){
             winner.textContent = 'Player Wins';
             playerScore++;
+            updateScores();
             return;
         }else{
             winner.textContent = 'Computer Wins';
             computerScore++;
+            updateScores();
             return;
         } 
     };
-    //Update scores
-    function updateScores() {
-        document.getElementById("player-score").innerText = playerScore
-        document.getElementById("comp-score").innerText = computerScore
-    };
-    updateScores();
     //Select level function from html level selector
     function getLevelFromURLParam() {
         const queryString = window.location.search;
@@ -123,7 +126,6 @@ const game = ()=> {
     } else {
     window.location.href='./';
     }
-    
 };
 //Call game function
 game();
