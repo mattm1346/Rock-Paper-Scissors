@@ -124,6 +124,7 @@ footer {
 .rules-text {
     display: flex;
     justify-content: space-around;
+    padding-bottom: 10px;
 }
 
 .level-text {
@@ -243,9 +244,9 @@ main h2 {
 
 /* Media Screen */
 
-/* For screen size 1440 and below */
+/* For screen size 800 and below */
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 800px) {
     
     .rules-outer {
         display: block;

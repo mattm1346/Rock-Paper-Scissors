@@ -135,3 +135,5 @@ It should create a copy of the original Rock-Paper-Scissors
 * [MDN Web Docs](https://developer.mozilla.org/en-US/)
 
 * [img bin](https://imgbin.com/)
+
+* [Font Awesome](https://fontawesome.com/)

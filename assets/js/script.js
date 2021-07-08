@@ -134,12 +134,13 @@ function game (){
         playerScore
         computerScore
         if(playerScore === 5){
-            console.log('Congratulations! You won');
+            alert('Congratulations! You won');
             playerScore = 0;
             computerScore = 0;
         }
         if(computerScore === 5){
-            console.log('Bad luck, you lost. Try again?');
+            alert('Bad luck, you lost. Try again?');
+            displayGameOver;
             playerScore = 0;
             computerScore = 0;
         }
