@@ -80,7 +80,7 @@ function game (){
                 compareHands(option, computerChoice);
             });
         });
-    };
+    }
     //Select level function from html level selector
     function getLevelFromURLParam() {
         const queryString = window.location.search;
@@ -128,11 +128,11 @@ function game (){
         }
         checkForGameOver();
         return;
-    }
+    };
     //Check score limit reaches 5 if true reset to 0
     function checkForGameOver(){
-        playerScore
-        computerScore
+        playerScore;
+        computerScore;
         if(playerScore === 5){
             alert('Congratulations! You won');
             playerScore = 0;
@@ -140,13 +140,12 @@ function game (){
         }
         if(computerScore === 5){
             alert('Bad luck, you lost. Try again?');
-            displayGameOver;
             playerScore = 0;
             computerScore = 0;
         }
         updateScores();
         return;
     }
-};
+}
 //Call game function
 game();
