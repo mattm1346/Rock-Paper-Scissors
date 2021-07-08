@@ -1,5 +1,7 @@
 # ROCK, PAPER, SCISSORS, LIZARD, SPOCK
 
+![Logo](assets/images/screenshots/homeimage.png)
+
 This is a Rock, Paper Scissors game but with a twist! This game lets the user increase the level of difficulty. The game is responsive to different devices and can be played on a laptop, mobile phone and tablet.
 
 ## User Experience
