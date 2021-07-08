@@ -72,6 +72,8 @@ The html and css code have been tested and validated via [W3C](https://validator
 
 ![W3C html](assets/images/screenshots/validator-css.png)
 
+Found no errors when running JavaScript code through [Jshint](https://jshint.com/). Found some minor warnings alerting that some functions may not be available in all browser versions.
+
 ## Different Devices
 
 ![index multi screen](assets/images/screenshots/multi-index.png)
