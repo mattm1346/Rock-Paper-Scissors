@@ -134,17 +134,17 @@ function game (){
         playerScore
         computerScore
         if(playerScore === 5){
-            alert('Congratulations! You won');
+            console.log('Congratulations! You won');
             playerScore = 0;
             computerScore = 0;
-            return;
         }
         if(computerScore === 5){
-            alert('Bad luck, you lost. Try again?');
+            console.log('Bad luck, you lost. Try again?');
             playerScore = 0;
             computerScore = 0;
-            return;
         }
+        updateScores();
+        return;
     }
 };
 //Call game function
