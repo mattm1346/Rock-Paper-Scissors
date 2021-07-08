@@ -121,16 +121,16 @@ function game (){
             winner.textContent = 'Player Wins';
             playerScore++;
             updateScores();
-            return;
         }else{
             winner.textContent = 'Computer Wins';
             computerScore++;
             updateScores();
-            return;
         }
+        checkForGameOver();
+        return;
     }
     //Check score limit reaches 5 if true reset to 0
-    function scoreLimit(){
+    function checkForGameOver(){
         playerScore
         computerScore
         if(playerScore === 5){
@@ -146,8 +146,6 @@ function game (){
             return;
         }
     }
-    playGame()
-    scoreLimit()
 };
 //Call game function
 game();
