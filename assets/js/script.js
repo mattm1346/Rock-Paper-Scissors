@@ -1,4 +1,5 @@
-const OPTION_CONFIG = {
+//Create objects for each option and say what each winsover
+const optionList = {
     //Rock
     rock: {
       name: 'rock',
@@ -41,24 +42,24 @@ const OPTION_CONFIG = {
     }
 };
 //Configure the level of difficulty
-const LEVEL_CONFIG = {
-    easy: [OPTION_CONFIG.rock, OPTION_CONFIG.paper, OPTION_CONFIG.scissors],
-    medium: [OPTION_CONFIG.rock, OPTION_CONFIG.paper, OPTION_CONFIG.scissors, OPTION_CONFIG.lizard],
-    hard: [OPTION_CONFIG.rock, OPTION_CONFIG.paper, OPTION_CONFIG.scissors, OPTION_CONFIG.lizard, OPTION_CONFIG.spock]
+const levelSelect = {
+    easy: [optionList.rock, optionList.paper, optionList.scissors],
+    medium: [optionList.rock, optionList.paper, optionList.scissors, optionList.lizard],
+    hard: [optionList.rock, optionList.paper, optionList.scissors, optionList.lizard, optionList.spock]
 };
 //Declare score of both players
-const game = ()=> {
+function game (){
     let playerScore = 0;
     let computerScore = 0;
+
     //Assign hands
-    const playGame = (level)=> {
-        const options = LEVEL_CONFIG[level];
+    function playGame(level) {
+        const options = levelSelect[level];
         const playerHand = document.querySelector(".player-hand");
         const computerHand = document.querySelector(".computer-hand");
         //Computer options
-        const computerOptions = LEVEL_CONFIG[level];
+        const computerOptions = levelSelect[level];
         const optionContainer = document.getElementsByClassName('options-outer')[0];
-        const optionNodes = document.querySelector(".options");
         options.forEach(option => {
             const optionNode = document.createElement('div');
             optionNode.innerHTML = `<div class="box">
@@ -71,7 +72,7 @@ const game = ()=> {
                 optionContainer.appendChild(optionNode);
                 //Event listener for clicking on options
                 optionNode.addEventListener("click", function(){
-                const computerNumber = Math.floor(Math.random() * LEVEL_CONFIG[level].length);
+                const computerNumber = Math.floor(Math.random() * levelSelect[level].length);
                 const computerChoice = computerOptions[computerNumber];
                 //Update images on choice
                 playerHand.src = `./assets/images/${option.name}.png`;
@@ -88,8 +89,12 @@ const game = ()=> {
     }
     //Find out if level is valid if false then return to index page
     function isLevelValid(level) {
-        const validLevels = Object.keys(LEVEL_CONFIG);
-        return validLevels.includes(level) ? true : false;
+        const validLevels = Object.keys(levelSelect);
+        if(validLevels.includes(level)) {
+            return true;
+        } else {
+            return false;
+        }
     }
     const level = getLevelFromURLParam();
     if(isLevelValid(level)) {
@@ -125,20 +130,24 @@ const game = ()=> {
         }
     }
     //Check score limit reaches 5 if true reset to 0
-    playerScore = 0;
-    computerScore = 0;
-    if('player-score' === 5){
-        alert('Congratulations! You won');
-        playerScore = 0;
-        computerScore = 0;
-        return;
+    function scoreLimit(){
+        playerScore
+        computerScore
+        if(playerScore === 5){
+            alert('Congratulations! You won');
+            playerScore = 0;
+            computerScore = 0;
+            return;
+        }
+        if(computerScore === 5){
+            alert('Bad luck, you lost. Try again?');
+            playerScore = 0;
+            computerScore = 0;
+            return;
+        }
     }
-    if('comp-score' === 5){
-        alert('Bad luck, you lost. Try again?');
-        playerScore = 0;
-        computerScore = 0;
-        return;
-    }
+    playGame()
+    scoreLimit()
 };
 //Call game function
 game();
