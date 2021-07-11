@@ -93,6 +93,14 @@ Here is a score count for each player so the user can keep track of who is winni
 
 ![Score](assets/images/screenshots/score.png)
 
+*Max score*
+
+If the player's score reaches 5, the page will display an alert that tells the player they won.
+
+If the computer's score reaches 5, the page will display and alert that tells the player they lost but invite to try again.
+
+After clicking off the alert, the score will be reset.
+
 *Options*
 
 Here are the options that the user clicks to choose their hand. Depending on the level select, there is a limit to what options will show (e.g. 'easy' will only show 'rock', 'paper', and 'scissors')
@@ -108,6 +116,8 @@ The html and css code have been tested and validated via [W3C](https://validator
 ![W3C html](assets/images/screenshots/validator-css.png)
 
 Found no errors when running JavaScript code through [Jshint](https://jshint.com/). Found some minor warnings alerting that some functions may not be available in all browser versions.
+
+While using chromes developer tools, I encountered an error log in the console alerting that 'favicon' could not be found. This error displayed a few times but I have not seen it when running recently so I believe this error to be fixed.
 
 ## Different Devices
 
