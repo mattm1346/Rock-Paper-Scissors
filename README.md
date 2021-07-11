@@ -107,6 +107,18 @@ Here are the options that the user clicks to choose their hand. Depending on the
 
 ![Options](assets/images/screenshots/all-hands.png)
 ___
+
+## Future Development
+
+*Hand-shake animation*
+
+I would like to add an animation to the game that makes both the hands shake up and down after the player selects an option for a few seconds before the hands update.
+
+*High-score*
+
+Initially, one of the user stories was to implement a high-score feature that records the player's high score. I decided to not implement this feature because there is already a player score that resets after 5 tries. By adding more scores I feel the user may get confused.
+
+___
 ## Testing
 
 The html and css code have been tested and validated via [W3C](https://validator.w3.org/) and returned with no errors.
@@ -143,7 +155,7 @@ For smaller devices, the level select buttons shrink a little but remain clearly
 
 ![Smaller screen game](assets/images/screenshots/multi-phone2.png)
 
-
+___
 ## Technology Used
 
 *img bin*
