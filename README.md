@@ -4,6 +4,41 @@
 
 This is a Rock, Paper Scissors game but with a twist! This game lets the user increase the level of difficulty. The game is responsive to different devices and can be played on a laptop, mobile phone and tablet.
 
+## How to Play
+
+Upon loading the website, the homepage will show. Simply select which level you wish to play (Level 1 - easy, Level 2 - medium, Level 3 - hard). The game page will load and you can start by selecting which option (Rock, Paper, Scissors, Lizard, Spock) to play against the computer. Good Luck!
+___
+## Rules
+
+The rules are displayed on the homepage and are also shown below:
+
+*Level 1*
+
+Rock beats Scissors
+
+Scissors beats Paper
+
+Paper beats Rock
+
+*Level 2*
+
+Lizard beats Paper
+
+Scissors beats Lizard
+
+Rock beats Lizard
+
+*Level 3*
+
+Spock beats Scissors
+
+Spock beats Rock
+
+Lizard beats Spock
+
+Paper beats Spock
+___
+
 ## User Experience
 
 **Target Audience**
@@ -19,7 +54,7 @@ The target audience for this game are both experienced and inexperienced gamers.
 3. As a novice to the game, rock paper scissor, I want to be shown how to play. End user goal: Learn how to play rock paper scissors. End business goal: Have users learn how to play so they will keep playing the game. Acceptance criteria: Add a rules section explaining what choice wins over the other (e.g Rock wins over Scissors).
 
 4. As a novice to computers, I want to easily find my way around the website. End user goal: Easily navigate through the website. End business goal: Keep users using the website and not leaving due to getting lost. Acceptance crtiteria: Create navigation bar for the different pages used (index and game page).
-
+___
 ## Wireframes
 
 I used Microsoft Word to build the wireframes after a rough sketch on a notepad.
@@ -63,7 +98,7 @@ Here is a score count for each player so the user can keep track of who is winni
 Here are the options that the user clicks to choose their hand. Depending on the level select, there is a limit to what options will show (e.g. 'easy' will only show 'rock', 'paper', and 'scissors')
 
 ![Options](assets/images/screenshots/all-hands.png)
-
+___
 ## Testing
 
 The html and css code have been tested and validated via [W3C](https://validator.w3.org/) and returned with no errors.
