@@ -12,7 +12,7 @@ ___
 
 The rules are displayed on the homepage and are also shown below:
 
-*Level 1*
+**Level 1**
 
 Rock beats Scissors
 
@@ -20,7 +20,7 @@ Scissors beats Paper
 
 Paper beats Rock
 
-*Level 2*
+**Level 2**
 
 Lizard beats Paper
 
@@ -28,7 +28,7 @@ Scissors beats Lizard
 
 Rock beats Lizard
 
-*Level 3*
+**Level 3**
 
 Spock beats Scissors
 
@@ -43,11 +43,11 @@ ___
 
 **Target Audience**
 
-The target audience for this game are both experienced and inexperienced gamers. The experienced gamers may wish to play a more difficult version of rock, paper, scissors. Wheras the inexperienced gamers may wish to play the easiest version with the rules provided.
+The target audience for this game are both experienced and inexperienced gamers. The experienced gamers may wish to play a more difficult version of rock, paper, scissors. Whereas the inexperienced gamers may wish to play the easiest version with the rules provided.
 
 ## User Stories
 
-1. As a gamer, I want to play a rock, paper, scissors game that is easy to understand. End user goal: Play a rock, paper, scissors game. End business goal: Keep users playing game and spreading word of mouth about game.Acceptance criteria: Create rock, paper, scissors game using HTML and CSS for website and JavaScript for input commands.
+1. As a gamer, I want to play a rock, paper, scissors game that is easy to understand. End user goal: Play a rock, paper, scissors game. End business goal: Keep users playing game and spreading word of mouth about game. Acceptance criteria: Create rock, paper, scissors game using HTML and CSS for website and JavaScript for input commands.
 
 2. As an experienced gamer, I want the ability to increase the level of difficulty of the game. End user goal: Play more levels of the game. End business goal: Keep users playing the game and not getting bored. Acceptance criteria: Add more options for user to choose (Level 2 - Add Lizard, Level 3 - Add Spock).
 
