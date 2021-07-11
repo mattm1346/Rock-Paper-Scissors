@@ -117,6 +117,23 @@ Found no errors when running JavaScript code through [Jshint](https://jshint.com
 
 Screenshots taken from [techsini](http://techsini.com/multi-mockup/index.php).
 
+*Larger-screen devices*
+
+Because naturally most users read left to right, I positioned the level select buttons horizontally and the rules sections horizontaly. This was also done to avoid empty space as initially I had the rules underneath one another but still the same width of the borders.
+
+![Larger screen index](assets/images/screenshots/multi-laptop.png)
+
+![Larger screen game](assets/images/screenshots/multi-laptop2.png)
+
+*Smaller-screen devices*
+
+For smaller devices, the level select buttons shrink a little but remain clearly readable. The buttons change display to be underneath one another as does the rules section.
+
+![Smaller screen index](assets/images/screenshots/multi-phone.png)
+
+![Smaller screen game](assets/images/screenshots/multi-phone2.png)
+
+
 ## Technology Used
 
 *img bin*
@@ -168,6 +185,12 @@ It should create a copy of the original Rock-Paper-Scissors
 [rock-paper-scissors-game](https://www.rock-paper-scissors-game.com/) is simple but very effective. One drawback is that the game resets just after one round. It could be better if it had more rounds before resetting the game.
 
 *Acknowledgements*
+
+I really struggled with the JavaScript of this project. When building the code, some functions that I wrote and called still would not work. My mentor, Akshat was a huge help in restructuring my code and suggesting code.
+
+For a few of the commits, labelled as 'update JavaScript' Akshat has written step by step and sent to me via Slack. I then copied the code and pasted into the JavaScript then commited and pushed so the deployed website would update and we could progress further with the remaining problems.
+
+After the call, I then removed the code that was pasted in and went through step by step adding in the code and trying to understand what functions did what.
 
 * [Code Institute](https://learn.codeinstitute.net/)
 
