@@ -53,6 +53,7 @@ function game (){
     let computerScore = 0;
 
     //Assign hands
+    
     function playGame(level) {
         const options = levelSelect[level];
         const playerHand = document.querySelector(".player-hand");
@@ -60,6 +61,7 @@ function game (){
         //Computer options
         const computerOptions = levelSelect[level];
         const optionContainer = document.getElementsByClassName('options-outer')[0];
+        //Akshat wrote this code, it creates the options section of the game page depending on the levelSelect 
         options.forEach(option => {
             const optionNode = document.createElement('div');
             optionNode.innerHTML = `<div class="box">
@@ -117,6 +119,7 @@ function game (){
             return;
         }
         //Check for a winner
+        //Changes text of outcome depending on who wins the round
         if(playerChoice.winsOver.includes(computerChoice.name)){
             winner.textContent = 'Player Wins';
             playerScore++;
@@ -126,6 +129,7 @@ function game (){
             computerScore++;
             updateScores();
         }
+        //Check if score reaches 5
         checkForGameOver();
         return;
     };
